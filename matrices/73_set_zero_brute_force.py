@@ -15,4 +15,4 @@ class Solution(object):
                     matrix[a][b]=0
         return matrix
 sol=Solution()
-print(sol.setZeroes([[0,1,2,0],[3,4,5,2],[1,3,1,5]]))
+print(sol.setZeroes([[0,1,2,0],[3,4,5,2],[1,3,1,9]]))
