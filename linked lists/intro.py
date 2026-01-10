@@ -22,12 +22,31 @@ class LinkedList:
             temp=temp.next
         temp.next=newNode
         return head
+    def deleteatbegineing(self,head):
+        if head is None:
+            return None 
+        head=head.next
+        return head
+    def deleteatEnd(self,head):
+        temp=head
+        if head is None:
+            return None
+        if head.next is None:
+            return None
+        while temp.next.next is not None:
+            temp=temp.next
+        temp.next=None
+        return head
 sol=LinkedList()
 head=None
 head=sol.insertAtBeginning(head,10)
 head=sol.insertAtBeginning(head,20)
 head=sol.insertAtBeginning(head,30)
 head=sol.insertAtEnd(head,70)
+head=sol.insertAtEnd(head,40)
+head=sol.insertAtEnd(head,60)
+head=sol.deleteatbegineing(head)
+head=sol.deleteatEnd(head)
 sol.printlist(head)
 
         
